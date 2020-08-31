@@ -4,24 +4,116 @@
 /* font-family: 'Bungee Shade', cursive; */
 
 /* LES VARIABLES CSS ICI */
+:root {
+    --font-principale: 'Cardo', serif;
+    --font-secondaire: 'Bungee Shade', cursive;
+
+    --black: #000;
+    --white: #fff;
+    --couleur-principale: #a7029a;
+    --couleur-secondaire: darkgray;
+    --degrade-principale: linear-gradient(36deg, rgba(167, 2, 154, 0.3));
+}
 
 /*---------------------- Generic ----------------------*/
 
 /* Mettre la ligne universelle pour le box-sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
+li {
+    list-style: none;
+}
+
+h1, h2 {
+    margin: 0;
+}
+a:link
+{
+    color: var(--white);
+    text-decoration:none;
+}
 
 
 /*---------------------- Elements ----------------------*/
+body {
+    font-family: Cardo;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    background-color: aqua;
+    color: black;
+    margin: 0;
+    list-style: none;
+}
 
+.hero {
+    height: 80vh;
 
+    background-color: var(--black);
 
+    position: relative;
+}
 
+.hero video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0.5;
+}
+
+.hero .content {
+    width:100%;
+    height: 100%;
+
+    color: var(--white);
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index:2;
+}
+
+.hero p, .hero a {
+    font-size: 24px;
+}
+
+h1 {
+    font-family: Bungee Shade;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    color: #FFFFFF;
+}
+h2{
+    font-family: Bungee Shade;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 96px;
+    color: #FFFFFF;
+}
 
 /*---------------------- Components ----------------------*/
 
+.conteneur {
+    max-width: 1142px;
+    margin: 0 auto;
+}
 
+.header-principal {
+    position: fixed;
+    display: flex;
 
+    width: 100%;
+    height: 73px;
 
+    background: #000000;
+}
 
 
 /*---------------------- Utilities ----------------------*/
